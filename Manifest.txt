@@ -1,0 +1,16 @@
+History.txt
+Manifest.txt
+PostInstall.txt
+README.rdoc
+Rakefile
+breadcrumb.gemspec
+lib/breadcrumb.rb
+lib/breadcrumb/controller_methods.rb
+lib/breadcrumb/view_helper.rb
+script/console
+script/destroy
+script/generate
+test/test_breadcrumb.rb
+test/test_controller_methods.rb
+test/test_helper.rb
+test/test_view_helper.rb
