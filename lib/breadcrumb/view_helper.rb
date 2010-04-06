@@ -5,11 +5,11 @@ module Breadcrumb
       crumbs = []
       if @breadcrumbs && !@breadcrumbs.empty?
         @breadcrumbs[0..-2].each do |txt, path|
-          crumbs << link_to(h(txt), path)
+          crumbs << "<li>#{link_to(h(txt), path)}</li>"
         end
-        crumbs << "<span>#{h(@breadcrumbs.last.first)}</span>"
+        crumbs << "<li class=\"current\"><span>#{h(@breadcrumbs.last.first)}</span></li>"
       end
-      return "#{crumbs.join(' » ')}" unless crumbs.empty?
+      return crumbs
     end
   end
 end
