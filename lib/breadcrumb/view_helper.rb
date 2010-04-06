@@ -9,7 +9,7 @@ module Breadcrumb
         end
         crumbs << "<li class=\"current\"><span>#{h(@breadcrumbs.last.first)}</span></li>"
       end
-      return crumbs
+      return crumbs.to_s
     end
   end
 end

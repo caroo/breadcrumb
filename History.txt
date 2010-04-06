@@ -1,4 +1,11 @@
+=== 0.1.1 2010-04-06
+
+* 1 minor enhancement:
+  * Changed html of breadcrumbs
+
 === 0.0.1 2009-11-02
 
 * 1 major enhancement:
   * Initial release
+
+
