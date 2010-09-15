@@ -5,11 +5,15 @@ module Breadcrumb
       crumbs = []
       if @breadcrumbs && !@breadcrumbs.empty?
         @breadcrumbs[0..-2].each do |txt, path|
-          crumbs << "<li>#{link_to(h(txt), path)}</li>"
+          crumbs << content_tag(:li) do
+            link_to(content_tag(:span, h(txt)), path)
+          end
         end
-        crumbs << "<li class=\"current\"><span>#{h(@breadcrumbs.last.first)}</span></li>"
+        crumbs << content_tag(:li, :class => :current) do
+          content_tag :span, h(@breadcrumbs.last.first)
+        end
       end
-      return crumbs.to_s
+      return crumbs.blank? ? "" : content_tag(:ul, crumbs.to_s, :id => :breadcrumb)
     end
   end
 end

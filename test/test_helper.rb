@@ -1,4 +1,6 @@
+require "rubygems"
 require 'stringio'
+gem 'test-unit'
 require 'test/unit'
 require File.dirname(__FILE__) + '/../lib/breadcrumb'
 
@@ -10,6 +12,7 @@ class TestController < ActionController::Base
   def do_nothing
     render :nothing => true
   end
+  
 end
 
 ActionController::Routing::Routes.draw do |map|  

@@ -5,9 +5,8 @@ module Breadcrumb
     include Breadcrumb::ViewHelper
     
     # Add other helpers here if you need them
-    include ::ActionView::Helpers::TagHelper
-    include ::ActionView::Helpers::UrlHelper
-    include ::ActionView::Helpers::TextHelper
+    include ::ActionView::Helpers
+    attr_accessor :output_buffer
     
     def test_should_render_breadcrumbs
       @breadcrumbs = [['aname', 'alink'], ['second_name','second_link']]

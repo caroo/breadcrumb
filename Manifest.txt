@@ -10,7 +10,6 @@ lib/breadcrumb/view_helper.rb
 script/console
 script/destroy
 script/generate
-test/test_breadcrumb.rb
-test/test_controller_methods.rb
+test/controller_methods_test.rb
 test/test_helper.rb
-test/test_view_helper.rb
+test/view_helper_test.rb

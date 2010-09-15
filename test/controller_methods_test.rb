@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Breadcrumb
-  class TestControllerMethods < ActionController::TestCase
+  class ControllerMethodsTest < ActionController::TestCase
     
     def setup
       @controller = TestController.new
@@ -25,7 +25,7 @@ module Breadcrumb
       # Fire just any action to run the before_filter in the static add_breadcrumb method
       get :do_nothing
       assert_response :success, @response.body
-      assert @controller.instance_variable_get('@breadcrumbs').nil?
+      assert_false @controller.instance_variable_defined? '@breadcrumbs'
     end
     
     def test_should_render_breadcrumbs_in_correct_order
