@@ -10,17 +10,17 @@ module Breadcrumb
         before_filter options do |controller|
           if options[:params] and options[:params].is_a?(Array)
             if controller.params[options[:params].first] and controller.params[options[:params].first] == options[:params].last
-              controller.send(:add_breadcrumb, name, url)
+              controller.add_breadcrumb(name, url)
             end
           else
-            controller.send(:add_breadcrumb, name, url)
+            controller.add_breadcrumb(name, url)
           end
         end
       end
 
       def reset_breadcrumbs
         before_filter do |controller|
-          controller.send(:reset_breadcrumbs)
+          controller.reset_breadcrumbs
         end
       end
     end
