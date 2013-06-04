@@ -12,7 +12,7 @@ module Breadcrumb
         crumbs << content_tag(:li, :class => :current) do
           content_tag :span, h(@breadcrumbs.last.first)
         end
-        content_tag(:ul, crumbs.to_s.html_safe, :id => :breadcrumb)
+        content_tag(:ul, crumbs.join.html_safe, :id => :breadcrumb)
       end
     end
   end
